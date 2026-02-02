@@ -36,3 +36,5 @@ def Atb(projections, geo, angles, backprojection_type="FDK", **kwargs):
 
     return _Atb_ext(projections, geox, geox.angles, backprojection_type, geox.mode, gpuids=gpuids)
 """
+def Atb(projections, geo, angles, backprojection_type="FDK", **kwargs):
+    pass

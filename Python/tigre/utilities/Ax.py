@@ -34,3 +34,6 @@ def Ax(img, geo, angles, projection_type="Siddon", **kwargs):
 
     return _Ax_ext(img, geox, geox.angles, projection_type, geox.mode, gpuids=gpuids)
 """
+
+def Ax(img, geo, angles, projection_type="Siddon", **kwargs):
+    pass
