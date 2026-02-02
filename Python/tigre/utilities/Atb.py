@@ -1,11 +1,10 @@
 import copy
 
 import numpy as np
-from _Atb import _Atb_ext
+# from _Atb import _Atb_ext
+# from .gpu import GpuIds
 
-from .gpu import GpuIds
-
-
+"""
 def Atb(projections, geo, angles, backprojection_type="FDK", **kwargs):
     if projections.dtype != np.float32:
         raise TypeError("Input data should be float32, not " + str(projections.dtype))
@@ -13,10 +12,8 @@ def Atb(projections, geo, angles, backprojection_type="FDK", **kwargs):
         raise ValueError("Complex types not compatible for back projection.")
     geox = copy.deepcopy(geo)
     geox.check_geo(angles)
-    """
-    Here we cast all values in geo to single point precision float. This way we know what behavior
-    to expect from pytigre to Cuda and can change single parameters accordingly.
-    """
+    # Here we cast all values in geo to single point precision float. This way we know what behavior
+    # to expect from pytigre to Cuda and can change single parameters accordingly.
     geox.cast_to_single()
     # geox.checknans()
 
@@ -38,3 +35,4 @@ def Atb(projections, geo, angles, backprojection_type="FDK", **kwargs):
         gpuids.devices = list(gpuids.devices[0:geo.nVoxel[0]])
 
     return _Atb_ext(projections, geox, geox.angles, backprojection_type, geox.mode, gpuids=gpuids)
+"""

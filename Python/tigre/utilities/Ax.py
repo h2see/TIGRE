@@ -1,11 +1,10 @@
 import copy
 
 import numpy as np
-from _Ax import _Ax_ext
+# from _Ax import _Ax_ext
+# from .gpu import GpuIds
 
-from .gpu import GpuIds
-
-
+"""
 def Ax(img, geo, angles, projection_type="Siddon", **kwargs):
     if img.dtype != np.float32:
         raise TypeError("Input data should be float32, not " + str(img.dtype))
@@ -20,10 +19,8 @@ def Ax(img, geo, angles, projection_type="Siddon", **kwargs):
         )
     geox = copy.deepcopy(geo)
     geox.check_geo(angles)
-    """
-    Here we cast all values in geo to single point precision float. This way we know what behavior
-    to expect from pytigre to Cuda and can change single parameters accordingly.
-    """
+    # Here we cast all values in geo to single point precision float. This way we know what behavior
+    # to expect from pytigre to Cuda and can change single parameters accordingly.
     geox.cast_to_single()
     # geox.checknans()
 
@@ -36,3 +33,4 @@ def Ax(img, geo, angles, projection_type="Siddon", **kwargs):
         gpuids.devices = list(gpuids.devices[0:len(angles)])
 
     return _Ax_ext(img, geox, geox.angles, projection_type, geox.mode, gpuids=gpuids)
+"""
