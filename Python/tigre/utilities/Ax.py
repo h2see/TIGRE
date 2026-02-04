@@ -1,10 +1,9 @@
 import copy
 
 import numpy as np
-# from _Ax import _Ax_ext
-# from .gpu import GpuIds
+from _Ax import _Ax_ext
+from .gpu import GpuIds
 
-"""
 def Ax(img, geo, angles, projection_type="Siddon", **kwargs):
     if img.dtype != np.float32:
         raise TypeError("Input data should be float32, not " + str(img.dtype))
@@ -33,7 +32,3 @@ def Ax(img, geo, angles, projection_type="Siddon", **kwargs):
         gpuids.devices = list(gpuids.devices[0:len(angles)])
 
     return _Ax_ext(img, geox, geox.angles, projection_type, geox.mode, gpuids=gpuids)
-"""
-
-def Ax(img, geo, angles, projection_type="Siddon", **kwargs):
-    pass

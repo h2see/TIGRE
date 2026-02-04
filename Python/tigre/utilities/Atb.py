@@ -1,10 +1,9 @@
 import copy
 
 import numpy as np
-# from _Atb import _Atb_ext
-# from .gpu import GpuIds
+from _Atb import _Atb_ext
+from .gpu import GpuIds
 
-"""
 def Atb(projections, geo, angles, backprojection_type="FDK", **kwargs):
     if projections.dtype != np.float32:
         raise TypeError("Input data should be float32, not " + str(projections.dtype))
@@ -35,6 +34,3 @@ def Atb(projections, geo, angles, backprojection_type="FDK", **kwargs):
         gpuids.devices = list(gpuids.devices[0:geo.nVoxel[0]])
 
     return _Atb_ext(projections, geox, geox.angles, backprojection_type, geox.mode, gpuids=gpuids)
-"""
-def Atb(projections, geo, angles, backprojection_type="FDK", **kwargs):
-    pass
